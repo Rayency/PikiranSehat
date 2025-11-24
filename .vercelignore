@@ -1,0 +1,9 @@
+app.py
+requirements.txt
+models/
+*.pkl
+*.py
+templates/
+__pycache__/
+venv/
+.git/

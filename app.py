@@ -132,7 +132,9 @@ def api_predict():
         return {'error': str(e)}, 400
 
 
-# =============== RUN SERVER (REPLIT VERSION) ===============
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    import os
+    # Jalankan app.run() hanya untuk local / PythonAnywhere
+    if os.environ.get('FLASK_ENV') != 'VERCEL':
+        app.run(host='0.0.0.0', port=8080, debug=True)
 

@@ -102,7 +102,7 @@ function resetFormWithConfirm() {
 // API call untuk prediksi (alternative JSON)
 async function predictViaAPI(formData) {
     try {
-        const response = await fetch('/api/predict', {
+        const response = await fetch('https://rayency.pythonanywhere.com/predict/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -207,3 +207,4 @@ window.MentalHealthUtils = {
     smoothScroll,
     updateFormProgress
 };
+
